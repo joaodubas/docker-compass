@@ -21,6 +21,7 @@ RUN apt-get -y -qq --force-yes update \
         -A /usr/share/locale/locale.alias en_US.UTF-8 \
     && curl -sSL https://get.rvm.io | bash -s stable --ruby=${RUBY_VERSION} \
     && gem install compass
+ENV LANG en_US.utf8
 
 # configure container
 USER compass
